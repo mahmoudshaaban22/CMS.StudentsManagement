@@ -1,0 +1,44 @@
+<div *ngIf="statistics" class="statistics-container">
+    <!-- Statistics Overview -->
+    <div class="statistics-overview">
+      <div class="stat-card">
+        <h3>{{'StudentsManagement::TotalStudents' | abpLocalization}}</h3>
+        <p>{{ statistics.totalStudents }}</p>
+      </div>
+      <div class="stat-card">
+        <h3>{{'StudentsManagement::AverageAge' | abpLocalization}}</h3>
+        <p>{{ statistics.averageAge.toFixed(2) }}</p>
+      </div>
+    </div>
+  
+    <!-- Grade Distribution -->
+    <div class="grade-distribution">
+      <div class="chart-card">
+        <h3>{{'StudentsManagement::GradeDistributionBarChart' | abpLocalization}}</h3>
+        <abp-chart
+          type="bar"
+          [data]="barchartData"
+          width="100%"
+
+
+
+
+          
+          height="400px"
+        ></abp-chart>
+      </div>
+      <div class="chart-card">
+        <h3>{{'StudentsManagement::GradeDistributionDoughnutChart' | abpLocalization}}</h3>
+
+        <abp-chart
+        type="doughnut"
+        [data]="chartData"
+        [options]="options"
+        width="400px"
+        height="400px"
+        [plugins]="myPlugin"
+      ></abp-chart>
+      </div>
+    </div>
+  </div>
+  

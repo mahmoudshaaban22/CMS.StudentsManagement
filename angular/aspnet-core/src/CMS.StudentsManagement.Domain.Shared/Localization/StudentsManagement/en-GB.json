@@ -1,0 +1,15 @@
+{
+  "culture": "en-GB",
+  "texts": {
+    "AppName": "StudentsManagement",
+    "Menu:Home": "Home",
+    "Welcome": "Welcome",
+    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
+    "Permission:Students:GetStudentsStatistics": "Get Students Statistics",
+    "Permission:Students:GetStudent": "Get Student",
+    "Permission:Students:ListStudent": "List Students",
+    "Permission:Students:DeleteStudent": "Delete Student",
+    "Permission:Students:CreateEditStudent": "Create / Edit Student",
+    "Students": "Students"
+  }
+}

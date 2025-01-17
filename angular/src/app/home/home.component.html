@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="text-center">
+    <!-- Show this content if the user is not logged in -->
+    <ng-container *ngIf="!hasLoggedIn">
+      <h3 class="mb-3">Welcome</h3>
+      <p class="lead text-muted mb-4">
+        {{ '::LongWelcomeMessage' | abpLocalization }}
+      </p>
+      <a href="javascript:void(0)" class="btn btn-primary px-4 py-2" (click)="login()">
+        <i class="fa fa-sign-in me-2"></i> {{ 'AbpAccount::Login' | abpLocalization }}
+      </a>
+    </ng-container>
+
+    <!-- Show this content if the user is logged in -->
+    <ng-container *ngIf="hasLoggedIn">
+      <h3 class="mb-3">Welcome Back!</h3>
+      <p class="lead text-success">
+         Explore your dashboard and features!
+      </p>
+    </ng-container>
+  </div>
+</div>
